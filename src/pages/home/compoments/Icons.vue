@@ -1,26 +1,12 @@
 <template>
     <div class="icons">
         <swiper :options="swiperOption" >
-            <swiper-slide>
-                <div class="icon" v-for="item of iconList" :key="item.id">
+            <swiper-slide v-for="(page, index) of pages" :key="index">
+                <div class="icon" v-for="item of page" :key="item.id">
                     <div class="icon-img">
                         <img class="icon-img-content" :src="item.imgUrl" :alt="item.desc"/>
                     </div>
                     <p class="icon-desc">{{item.desc}}</p>
-                </div>
-            </swiper-slide>
-            <swiper-slide>
-                <div class="icon">
-                    <div class="icon-img">
-                        <img class="icon-img-content" src="http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png" alt=""/>
-                    </div>
-                    <p class="icon-desc">景点门票</p>
-                </div>
-                <div class="icon">
-                    <div class="icon-img">
-                        <img class="icon-img-content" src="http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png" alt=""/>
-                    </div>
-                    <p class="icon-desc">景点门票</p>
                 </div>
             </swiper-slide>
         </swiper>
@@ -48,7 +34,7 @@ export default {
                 {
                     id: '0003',
                     imgUrl: "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
-                    desc: "秦皇岛必玩"
+                    desc: "秦皇岛必玩景点得到"
                 },
                 {
                     id: '0004',
@@ -100,6 +86,7 @@ export default {
 </script>
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl'
+@import '~styles/mixins.styl'
     .icons >>> .swiper-container
         width: 100%
         height: 0
@@ -120,6 +107,7 @@ export default {
             height : .44rem
             line-height :.44rem
             color :$darkTextColor
+            ellipsis()
         .icon-img
             position : absolute
             top:0
