@@ -2,7 +2,7 @@
     <div>
         <div class="title">热销推荐</div>
         <ul>
-            <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+            <li class="item border-bottom" v-for="item of list" :key="item.id">
                 <img class="item-img" :src="item.imgUrl"/>
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
@@ -17,35 +17,8 @@
 <script>
 export default {
     name: 'HomeRecommend',
-    data () {
-        return {
-            recommendList: [
-                {
-                    id: '0001',
-                    imgUrl: 'http://img1.qunarzz.com/sight/source/1812/58/ebdb4ae5c789be.jpg_r_640x214_21321088.jpg',
-                    title: '秦皇岛亲子游',
-                    desc: '放下工作，带宝贝出发，和孩子一起玩才是正经事！'
-                },
-                {
-                    id: '0002',
-                    imgUrl: 'http://img1.qunarzz.com/sight/source/1812/58/ebdb4ae5c789be.jpg_r_640x214_21321088.jpg',
-                    title: '秦皇岛亲子游',
-                    desc: '放下工作，带宝贝出发，和孩子一起玩才是正经事！'
-                },
-                {
-                    id: '0003',
-                    imgUrl: 'http://img1.qunarzz.com/sight/source/1812/58/ebdb4ae5c789be.jpg_r_640x214_21321088.jpg',
-                    title: '秦皇岛亲子游',
-                    desc: '放下工作，带宝贝出发，和孩子一起玩才是正经事！'
-                },
-                {
-                    id: '0004',
-                    imgUrl: 'http://img1.qunarzz.com/sight/source/1812/58/ebdb4ae5c789be.jpg_r_640x214_21321088.jpg',
-                    title: '秦皇岛亲子游',
-                    desc: '放下工作，带宝贝出发，和孩子一起玩才是正经事！'
-                }
-            ]
-        }
+    props: {
+        list: Array
     }
 }
 </script>

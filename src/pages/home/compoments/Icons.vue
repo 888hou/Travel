@@ -1,6 +1,6 @@
 <template>
     <div class="icons">
-        <swiper :options="swiperOption" >
+        <swiper :options="swiperOption" v-if="showSwiper">
             <swiper-slide v-for="(page, index) of pages" :key="index">
                 <div class="icon" v-for="item of page" :key="item.id">
                     <div class="icon-img">
@@ -15,64 +15,21 @@
 <script>
 export default {
     name: 'HomeIcons',
+    props: {
+        list: Array
+    },
     data() {
         return {
             swiperOption: {
-                loop: true
-            },
-            iconList: [
-                {
-                    id: '0001',
-                    imgUrl: "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-                    desc: "景点门票"
-                },
-                {
-                    id: '0002',
-                    imgUrl: "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/a40ee278d67000f2a29d2e20f6a029b3.png",
-                    desc: "自然风光"
-                },
-                {
-                    id: '0003',
-                    imgUrl: "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
-                    desc: "秦皇岛必玩景点得到"
-                },
-                {
-                    id: '0004',
-                    imgUrl: "http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
-                    desc: "一日游"
-                },
-                {
-                    id: '0005',
-                    imgUrl: "http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png",
-                    desc: "庙会灯会"
-                },
-                {
-                    id: '0006',
-                    imgUrl: "http://img1.qunarzz.com/piao/fusion/1803/35/9639025c30a3d802.png",
-                    desc: "鸽子窝"
-                },
-                {
-                    id: '0007',
-                    imgUrl: "http://img1.qunarzz.com/piao/fusion/1803/f5/a963333e1fa802.png",
-                    desc: "本地好玩"
-                },
-                {
-                    id: '0008',
-                    imgUrl: "http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png",
-                    desc: "老龙头"
-                },
-                {
-                    id: '0008',
-                    imgUrl: "http://img1.qunarzz.com/piao/fusion/1803/80/416c6ab3368d1f02.png",
-                    desc: "全部玩乐"
-                }
-            ]
+                //loop: true,
+                autoPlay: false
+            }
         }
     },
     computed: {
         pages () {
             const pages = []
-            this.iconList.forEach((item, index) => {
+            this.list.forEach((item, index) => {
                 const page = Math.floor(index / 8)
                 if (!pages[page]) {
                     pages[page] = []
@@ -80,6 +37,9 @@ export default {
                 pages[page].push(item)
             })
             return pages
+        },
+        showSwiper () {
+            return this.list.length
         }
     }
 }

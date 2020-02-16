@@ -1,3 +1,4 @@
+# 添加不提交的目录和文件及后缀
 .DS_Store
 node_modules/
 /dist/
