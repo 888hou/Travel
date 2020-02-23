@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 import Bscroll from 'better-scroll'
 export default {
   name: 'CitySearch',
@@ -30,10 +31,10 @@ export default {
     handleCityClick (city) {
       //因为没有异步操作所以不需要先调用dispatch-action可以直接调用commit方法
       //this.$store.dispatch('changeCity', city)
-      this.$store.commit('changeCity', city)
-      this.keyword = ""
+      this.changeCity(city)
       this.$router.push('/')
-    }
+    },
+    ...mapMutations(['changeCity'])
   },
   computed: {
     hasNoData () {
