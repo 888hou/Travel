@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <!--当先路由对应的内容-->
-    <router-view/>
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
   </div>
 </template>
 
