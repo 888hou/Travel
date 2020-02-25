@@ -1,0 +1,93 @@
+{
+  "id": "1633342",
+  "name": "Travel",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "Travel项目图标",
+  "glyphs": [
+    {
+      "icon_id": "10463895",
+      "name": "图片",
+      "font_class": "tupian",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "907949",
+      "name": "箭头",
+      "font_class": "arrow-top-copy",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "3544821",
+      "name": "下箭头",
+      "font_class": "arrow",
+      "unicode": "e73a",
+      "unicode_decimal": 59194
+    },
+    {
+      "icon_id": "4646165",
+      "name": "下箭头",
+      "font_class": "f11",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "8740141",
+      "name": "下箭头",
+      "font_class": "arrow_down",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "8755247",
+      "name": "下箭头",
+      "font_class": "f11-copy",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "8791717",
+      "name": "下箭头",
+      "font_class": "-arrow-down",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "8882401",
+      "name": "下箭头",
+      "font_class": "f111",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "7725772",
+      "name": "下箭头",
+      "font_class": "sjt",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "608351",
+      "name": "箭头",
+      "font_class": "jiantouarrow486",
+      "unicode": "e6aa",
+      "unicode_decimal": 59050
+    },
+    {
+      "icon_id": "2674472",
+      "name": "返回",
+      "font_class": "fanhui",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "2675116",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    }
+  ]
+}
