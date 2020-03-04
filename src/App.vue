@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <!--当先路由对应的内容-->
-    <keep-alive>
+    <!--当先路由对应的内容 exclude组件名 取消组件缓存-->
+    <keep-alive exclude="Detail">
       <router-view/>
     </keep-alive>
   </div>
