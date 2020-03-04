@@ -7,7 +7,6 @@
       :cities="cities"
       @change="handleLetterChange"
     ></city-alphabet>
-    <div>Hello City</div>
   </div>
 </template>
 
